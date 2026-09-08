@@ -1,0 +1,19 @@
+
+plugins { id "java" }
+java { toolchain { languageVersion = JavaLanguageVersion.of(25) } }
+group = "dev.friendbeacons"
+version = "1.1.0+26.2"
+base { archivesName = "FriendBeacons-paper-26.2" }
+repositories {
+    mavenCentral()
+    maven { url = "https://repo.papermc.io/repository/maven-public/" }
+}
+dependencies {
+    compileOnly "io.papermc.paper:paper-api:26.2.build.+"
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = "UTF-8" }
+processResources {
+    filesMatching("plugin.yml") {
+        expand version: version
+    }
+}
