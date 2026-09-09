@@ -8,14 +8,14 @@ const FABRIC_JAR =
   "https://github.com/CaptainDog8999/FriendBeacons/raw/main/attachments/FriendBeacons-fabric-26.2.jar";
 
 const commands = [
-  { cmd: "/fwp share <player>", effect: "That player may see your live pin" },
-  { cmd: "/fwp unshare <player>", effect: "Revoke their view" },
-  { cmd: "/fwp everyone", effect: "Anyone online with the client + Xaero's can see you" },
-  { cmd: "/fwp nobody", effect: "Hide your pin (default)" },
-  { cmd: "/fwp list", effect: "Who can see you" },
-  { cmd: "/fwp incoming", effect: "Who is sharing with you" },
-  { cmd: "/fwp color <color>", effect: "Change pin color" },
-  { cmd: "/fwp", effect: "Status" },
+  { cmd: "/friendbeacons share <player>", effect: "That player may see your live pin" },
+  { cmd: "/friendbeacons unshare <player>", effect: "Revoke their view" },
+  { cmd: "/friendbeacons everyone", effect: "Anyone online with the client + Xaero's can see you" },
+  { cmd: "/friendbeacons nobody", effect: "Hide your pin (default)" },
+  { cmd: "/friendbeacons list", effect: "Who can see you" },
+  { cmd: "/friendbeacons incoming", effect: "Who is sharing with you" },
+  { cmd: "/friendbeacons color <color>", effect: "Change pin color" },
+  { cmd: "/friendbeacons", effect: "Status" },
 ];
 
 function Pin() {
@@ -69,7 +69,7 @@ function Home() {
           {[
             {
               title: "Opt-in only",
-              body: "Nobody sees you until you run /fwp share or /fwp everyone. Default is hidden.",
+              body: "Nobody sees you until you run /friendbeacons share or /friendbeacons everyone. Default is hidden.",
             },
             {
               title: "Mixed loaders",
@@ -137,7 +137,10 @@ function Home() {
           <h2 className="fb-serif text-xl text-[#c5d4b8]">COMMANDS</h2>
           <ul className="mt-6 divide-y divide-[#9aaa90]/15 overflow-hidden rounded-xl border border-[#9aaa90]/20">
             {commands.map((row) => (
-              <li key={row.cmd} className="grid gap-1 px-4 py-3 sm:grid-cols-[16rem_1fr] sm:items-center">
+              <li
+                key={row.cmd}
+                className="grid gap-1 px-4 py-3 sm:grid-cols-[20rem_1fr] sm:items-center"
+              >
                 <code className="font-mono text-sm text-[#c5d4b8]">{row.cmd}</code>
                 <span className="text-sm text-[#e6dcc8]/70">{row.effect}</span>
               </li>
