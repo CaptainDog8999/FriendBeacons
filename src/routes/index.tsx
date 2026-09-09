@@ -61,6 +61,9 @@ function Home() {
           <p className="mx-auto mt-6 max-w-xl text-base text-[#c5d4b8]/90 sm:text-lg">
             Live minimap pins for friends who opt in. Minecraft 26.2.
           </p>
+          <p className="fb-serif mt-4 text-xs tracking-[0.22em] text-[#9aaa90]">
+            A MOD MADE BY SHARD
+          </p>
         </div>
       </section>
 
@@ -148,6 +151,10 @@ function Home() {
           </ul>
         </section>
       </main>
+
+      <footer className="border-t border-[#9aaa90]/15 py-8 text-center text-sm text-[#9aaa90]">
+        Friend Beacons is a Minecraft mod made by Shard.
+      </footer>
     </div>
   );
 }
