@@ -1,8 +1,28 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap");
 
 @layer base {
+  :root {
+    --fb-ink: #121212;
+    --fb-stone: #e6dcc8;
+    --fb-sage: #9aaa90;
+    --fb-sage-bright: #c5d4b8;
+  }
+
+  html,
+  body {
+    background: var(--fb-ink);
+    color: var(--fb-stone);
+    font-family: "Source Sans 3", sans-serif;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+.fb-serif {
+  font-family: Cinzel, serif;
+  letter-spacing: 0.18em;
 }
